@@ -2,28 +2,43 @@
  * @license Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
-import BalloonEditorBase from '@ckeditor/ckeditor5-editor-balloon/src/ballooneditor';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { UploadAdapter } from '@ckeditor/ckeditor5-adapter-ckfinder';
+import { BalloonEditor as BalloonEditorBase } from '@ckeditor/ckeditor5-editor-balloon';
+import { Alignment } from '@ckeditor/ckeditor5-alignment';
 import { Autoformat } from '@ckeditor/ckeditor5-autoformat';
-import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
+import { AutoImage } from '@ckeditor/ckeditor5-image';
+import { SimpleUploadAdapter } from '@ckeditor/ckeditor5-upload';
 import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
-import { CKBox } from '@ckeditor/ckeditor5-ckbox';
-import { CKFinder } from '@ckeditor/ckeditor5-ckfinder';
-import { EasyImage } from '@ckeditor/ckeditor5-easy-image';
+import { Bold } from '@ckeditor/ckeditor5-basic-styles';
+import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
+import { Essentials } from '@ckeditor/ckeditor5-essentials';
+import { FontBackgroundColor } from '@ckeditor/ckeditor5-font';
+import { FontColor } from '@ckeditor/ckeditor5-font';
+import { FontFamily } from '@ckeditor/ckeditor5-font';
+import { FontSize } from '@ckeditor/ckeditor5-font';
 import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Image, ImageCaption, ImageStyle, ImageToolbar, ImageUpload, PictureEditing } from '@ckeditor/ckeditor5-image';
+import { Image } from '@ckeditor/ckeditor5-image';
+import { ImageCaption } from '@ckeditor/ckeditor5-image';
+import { ImageResize } from '@ckeditor/ckeditor5-image';
+import { ImageStyle } from '@ckeditor/ckeditor5-image';
+import { ImageToolbar } from '@ckeditor/ckeditor5-image';
+import { ImageUpload } from '@ckeditor/ckeditor5-image';
 import { Indent } from '@ckeditor/ckeditor5-indent';
+import { IndentBlock } from '@ckeditor/ckeditor5-indent';
+import { Italic } from '@ckeditor/ckeditor5-basic-styles';
 import { Link } from '@ckeditor/ckeditor5-link';
+import { LinkImage } from '@ckeditor/ckeditor5-link';
 import { List } from '@ckeditor/ckeditor5-list';
+import { ListStyle } from '@ckeditor/ckeditor5-list';
 import { MediaEmbed } from '@ckeditor/ckeditor5-media-embed';
 import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { PasteFromOffice } from '@ckeditor/ckeditor5-paste-from-office';
-import { Table, TableToolbar } from '@ckeditor/ckeditor5-table';
+import { Table } from '@ckeditor/ckeditor5-table';
+import { TableCellProperties } from '@ckeditor/ckeditor5-table';
+import { TableProperties } from '@ckeditor/ckeditor5-table';
+import { TableToolbar } from '@ckeditor/ckeditor5-table';
 import { TextTransformation } from '@ckeditor/ckeditor5-typing';
-import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
+import { Underline } from '@ckeditor/ckeditor5-basic-styles';
 export default class BalloonEditor extends BalloonEditorBase {
-    static builtinPlugins: (typeof TextTransformation | typeof Essentials | typeof UploadAdapter | typeof Paragraph | typeof Heading | typeof Autoformat | typeof Bold | typeof Italic | typeof BlockQuote | typeof CloudServices | typeof Image | typeof ImageCaption | typeof ImageStyle | typeof ImageToolbar | typeof ImageUpload | typeof CKBox | typeof CKFinder | typeof EasyImage | typeof Indent | typeof Link | typeof List | typeof MediaEmbed | typeof PasteFromOffice | typeof Table | typeof TableToolbar | typeof PictureEditing)[];
+    static builtinPlugins: (typeof TextTransformation | typeof Autoformat | typeof SimpleUploadAdapter | typeof AutoImage | typeof Image | typeof ImageCaption | typeof ImageResize | typeof ImageStyle | typeof ImageToolbar | typeof ImageUpload | typeof BlockQuote | typeof Bold | typeof Italic | typeof Underline | typeof CloudServices | typeof Essentials | typeof Paragraph | typeof Heading | typeof Indent | typeof IndentBlock | typeof Link | typeof LinkImage | typeof List | typeof ListStyle | typeof MediaEmbed | typeof Table | typeof TableCellProperties | typeof TableProperties | typeof TableToolbar | typeof Alignment | typeof FontBackgroundColor | typeof FontColor | typeof FontFamily | typeof FontSize)[];
     static defaultConfig: {
         toolbar: {
             items: string[];
